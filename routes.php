@@ -19,7 +19,7 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 if ($url == '/home' || $url == '/') {
     $homeController->index();
   
-} elseif ($url == '/events/index' || $url == '/') {
+} elseif ($url == '/events/index' ) {
     $eventscontroller->index();
 } elseif ($url == '/events/create' && $requestMethod == 'GET') {
     $eventscontroller->create();
@@ -35,7 +35,7 @@ if ($url == '/home' || $url == '/') {
     $userId = $matches[1];
     $eventscontroller->delete($userId);
 
-}elseif ($url == '/organizers/index' || $url == '/') {
+}elseif ($url == '/organizers/index' ) {
     $organizerscontroller->index();
 } elseif ($url == '/organizers/create' && $requestMethod == 'GET') {
     $organizerscontroller->create();
@@ -51,7 +51,7 @@ if ($url == '/home' || $url == '/') {
     $userId = $matches[1];
     $organizerscontroller->delete($userId);
 
-}elseif ($url == '/sponsorships/index' || $url == '/') {
+}elseif ($url == '/sponsorships/index' ) {
     $sponsorshipscontroller->index();
 } elseif ($url == '/sponsorships/create' && $requestMethod == 'GET') {
     $sponsorshipscontroller->create();
@@ -67,7 +67,7 @@ if ($url == '/home' || $url == '/') {
     $userId = $matches[1];
     $sponsorshipscontroller->delete($userId);
   
-} elseif ($url == '/attendees/index' || $url == '/') {
+} elseif ($url == '/attendees/index' ) {
     $attendeescontroller->index();
 } elseif ($url == '/attendees/create' && $requestMethod == 'GET') {
     $attendeescontroller->create();
