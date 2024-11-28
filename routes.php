@@ -3,11 +3,13 @@
 require_once 'app/controllers/EventsController.php';
 require_once 'app/controllers/HomeController.php';
 require_once 'app/controllers/OrganizersController.php';
+require_once 'app/controllers/SponsorshipsController.php';
 
 
 $eventscontroller = new EventsController();
 $homeController = new HomeController();
 $organizerscontroller = new OrganizersController();
+$sponsorshipscontroller = new SponsorshipsController();
 
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -46,6 +48,22 @@ if ($url == '/home' || $url == '/') {
 } elseif (preg_match('/\/organizers\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $organizerscontroller->delete($userId);
+
+}elseif ($url == '/sponsorships/index' || $url == '/') {
+    $sponsorshipscontroller->index();
+} elseif ($url == '/sponsorships/create' && $requestMethod == 'GET') {
+    $sponsorshipscontroller->create();
+} elseif ($url == '/sponsorships/store' && $requestMethod == 'POST') {
+    $sponsorshipscontroller->store();
+} elseif (preg_match('/\/sponsorships\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+    $userId = $matches[1];
+    $sponsorshipscontroller->edit($userId);
+} elseif (preg_match('/\/sponsorships\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
+    $userId = $matches[1];
+    $sponsorshipscontroller->update($userId, $_POST);
+} elseif (preg_match('/\/sponsorships\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+    $userId = $matches[1];
+    $sponsorshipscontroller->delete($userId);
   
 } else {
     http_response_code(404);
