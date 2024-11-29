@@ -39,7 +39,7 @@
             box-shadow: 0 3px 3px 0 black !important;
         }
 
-        form input {
+        form input, select {
             margin-bottom: 10px;
             border-radius: 5px;
         }
@@ -63,6 +63,11 @@
             overflow: hidden;
             /* Potong isi agar mengikuti radius */
             width: 60rem !important;
+        }
+        select, option{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding : 7px
         }
 
         .welcome {

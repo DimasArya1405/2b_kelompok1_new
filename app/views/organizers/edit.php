@@ -7,7 +7,7 @@
             EDIT ORGANISASI
         </h1>
         <div class="btn-create mt-6">
-            <a href="/events/index" class="flex gap-2 bg-red-600 rounded-md w-40 py-2 justify-center items-center gap-1 hover:bg-red-700 transition-duration-300 ease-in-out text-white">
+            <a href="/organizers/index" class="flex gap-2 bg-red-600 rounded-md w-40 py-2 justify-center items-center gap-1 hover:bg-red-700 transition-duration-300 ease-in-out text-white">
                 <i class="bi bi-backspace"></i>
                 Kembali
             </a>
@@ -28,7 +28,7 @@
                     </option>
                 <?php endforeach; ?>
             </select>
-            <button type="submit" class=" w-24 py-2 bg-green-600 text-white hover:bg-green-800 rounded-md transition duration-300 ease-in-out mt-4">Update</button>
+            <button type="submit" class=" py-2 bg-green-600 text-white hover:bg-green-800 rounded-md transition duration-300 ease-in-out mt-4">Update</button>
         </form>
     </div>
 </div>

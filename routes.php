@@ -18,7 +18,7 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 if ($url == '/home' || $url == '/') {
     $homeController->index();
-  
+
 } elseif ($url == '/events/index' ) {
     $eventscontroller->index();
 } elseif ($url == '/events/create' && $requestMethod == 'GET') {
