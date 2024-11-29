@@ -1,12 +1,9 @@
-<!-- app/views/user/index.php -->
-
-
 <?php require_once '../public/header.php'; ?>
 <?php require_once '../public/main.php'; ?>
 
 <div class="flex flex-col justify-center items-center w-full">
     <div class="ml-64 -mt-5 py-5 flex flex-col justify-center items-center">
-    <h1 class="text-center font-bold text-2xl tracking-wider px-10 py-6 bg-gradient-to-r from-purple-500 via-purple-100 to-purple-400 rounded-xl -mt-10 z-10 w-3/5 judul">
+        <h1 class="text-center font-bold text-2xl tracking-wider px-10 py-6 bg-gradient-to-r from-purple-500 via-purple-100 to-purple-400 rounded-xl -mt-10 z-10 w-3/5 judul">
             DAFTAR PESERTA
         </h1>
         <div class="btn w-full mt-6 pl-7">
@@ -15,7 +12,6 @@
                 Tambah Peserta Baru
             </a>
         </div>
-
         <?php
         $no = 1; ?>
         <table border="1" style="border-collapse: collapse;" class="mt-3 shadow-md rounded-sm">
@@ -24,6 +20,7 @@
                 <th class="text-center px-4">Nama Peserta</th>
                 <th class="text-center px-4">Email</th>
                 <th class="text-center px-4">Nomor Telepon</th>
+                <th class="text-center px-4">Nama Acara</th>
                 <!-- <th class="text-center px-4">Acara</th> -->
                 <th class=" w-44">Action</th>
             </tr>
@@ -34,7 +31,7 @@
                     <td><?= htmlspecialchars($user['nama_peserta']) ?></td>
                     <td><?= htmlspecialchars($user['email']) ?> </td>
                     <td><?= htmlspecialchars($user['nomor_telepon']) ?></td>
-                    <!-- <td><?= htmlspecialchars($user['acara']) ?></td> -->
+                    <td><?= htmlspecialchars($user['nama_acara']) ?></td>
                     <td class="px-4 py-4 text-center gap-4">
                         <a href="/attendees/edit/<?php echo $user['id_peserta']; ?>" class=" text-center py-2 px-4 mr-1 bg-yellow-300 hover:bg-yellow-500 transition duration-300 ease-in-out rounded-xl">
                             Edit
@@ -49,11 +46,8 @@
                 ?>
             <?php endforeach; ?>
         </table>
-
     </div>
 </div>
 
-
-    <?php require_once '../public/navbar.php'; ?>
-
-    <?php require_once '../public/footer.php'; ?>
+<?php require_once '../public/navbar.php'; ?>
+<?php require_once '../public/footer.php'; ?>
