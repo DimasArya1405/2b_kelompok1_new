@@ -2,7 +2,7 @@
 // app/controllers/SponsorshipsController.php
 require_once '../app/models/Sponsorships.php';
 
-class SponsorshipsController {
+class SponsorshipsController extends Sponsorships{
     private $sponsorshipsModel;
 
     public function __construct() {
@@ -21,16 +21,18 @@ class SponsorshipsController {
     }
 
     public function store() {
+        $id_events = $_POST['id_events'];
         $nama_sponsor = $_POST['nama_sponsor'];
         $nilai_sponsor = $_POST['nilai_sponsor'];
         $jenis_sponsor = $_POST['jenis_sponsor'];
-        $this->sponsorshipsModel->add($nama_sponsor, $nilai_sponsor, $jenis_sponsor);
+        $this->sponsorshipsModel->add($id_events,$nama_sponsor, $nilai_sponsor, $jenis_sponsor);
         header('Location: /sponsorships/index');
     }
     // Show the edit form with the user data
     public function edit($id) {
-        $sponsorships = $this->sponsorshipsModel->find($id); // Assume find() gets user by ID
-        require_once __DIR__ . '/../views/sponsorships/edit.php';
+        $user = $this->sponsorshipsModel->find($id); // Assume find() gets user by ID
+        $sponsorships = $this->sponsorshipsModel->getAllEvents(); // Ambil data kategori
+        require_once '../app/views/sponsorships/edit.php';
     }
 
     // Process the update request
@@ -50,6 +52,6 @@ class SponsorshipsController {
             header("Location: /sponsorships/index"); // Redirect to user list
         } else {
             echo "Failed to delete user.";
-        }
+    }
     }
 }

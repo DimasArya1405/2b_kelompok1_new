@@ -22,6 +22,7 @@
                 <th class="text-center px-4">Nama Sponsorships</th>
                 <th class="text-center px-4">Nilai Sponsor</th>
                 <th class="text-center px-4">Jenis Sponsor</th>
+                <th class="text-center px-4">NAma Acara</th>
                 <th class=" w-44 text-center">Action</th>
             </tr>
             <?php
@@ -31,6 +32,7 @@
                     <td><?= htmlspecialchars($user['nama_sponsor']) ?></td>
                     <td><?= htmlspecialchars($user['nilai_sponsor']) ?> </td>
                     <td><?= htmlspecialchars($user['jenis_sponsor']) ?></td>
+                    <td><?= htmlspecialchars($user['nama_acara']) ?></td>
                     <td class="px-4 py-4 text-center gap-4">
                         <a href="/sponsorships/edit/<?php echo $user['id_sponsor']; ?>" class=" text-center py-2 px-4 mr-1 bg-yellow-300 hover:bg-yellow-500 transition duration-300 ease-in-out rounded-xl">
                             Edit

@@ -1,4 +1,3 @@
-<!-- app/views/user/create.php -->
 <?php require_once '../public/header.php'; ?>
 <?php require_once '../public/main.php'; ?>
 
@@ -13,20 +12,19 @@
                 Kembali
             </a>
         </div>
-
         <form action="/sponsorships/store" method="POST">
-
+            <select name="id_events" id="id_events" required>
+                <option style="border: 1px solid black;" value="" selected disabled>Pilih Acara</option>
+                <?php foreach ($events as $index): ?>
+                    <option value="<?= $index['id_events'] ?>"><?= $index['nama_acara'] ?></option>
+                <?php endforeach ?>
+            </select>
             <label for="nama_sponsor">Nama Sponsorships:</label>
             <input type="text" name="nama_sponsor" id="nama_sponsor" required>
-
             <label for="nilai_sponsor">Nilai Sponsor:</label>
             <input type="number" name="nilai_sponsor" id="nilai_sponsor" required>
-
             <label for="jenis_sponsor">Jenis Sponsor:</label>
             <input type="text" name="jenis_sponsor" id="jenis_sponsor" required>
-            
-
-
             <button type="submit" class=" w-24 py-2 bg-blue-600 text-white hover:bg-blue-800 rounded-md transition duration-300 ease-in-out mt-4">Simpan</button>
         </form>
     </div>
