@@ -17,4 +17,11 @@ class Database {
         }
         return $this->conn;
     }
+
+}
+try {
+    $db = new PDO('mysql:host=160.19.166.42;dbname=2B_klp1', '2B_klp1', 'fbVVrQF8_*ut.Koc');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die('Database connection failed: ' . $e->getMessage());
 }
