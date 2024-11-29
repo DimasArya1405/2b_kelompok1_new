@@ -18,6 +18,8 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 if ($url == '/home' || $url == '/') {
     $homeController->index();
+}elseif ($url == '/home/about') {
+    $homeController->about();
 
 } elseif ($url == '/events/index' ) {
     $eventscontroller->index();
