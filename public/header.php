@@ -38,11 +38,20 @@
             background-color: #ffff;
             box-shadow: 0 3px 3px 0 black !important;
         }
+        .about .card img{
+            width: 12rem;
+            height: 12rem;
+            background-color: #ffff !important;
+
+        }
 
         form input, select {
             margin-bottom: 10px;
             border-radius: 5px;
         }
+        /* .card{
+            border: 1px solid black;
+        } */
 
         th {
             padding-left: 5px;
@@ -51,6 +60,17 @@
 
         .judul {
             box-shadow: 0 5px 5px 0 black !important;
+        }
+        .about .card table,
+        .about .card tr,
+        .about .card th,
+        .about .card td{
+            border-radius: none;
+            border-collapse: none;
+            border:none;
+            border-spacing: 0;
+            box-shadow: none !important;
+            padding: none !important;
         }
 
         table {
@@ -75,13 +95,9 @@
             letter-spacing: 5px;
         }
 
-        img {
-            width: 8rem;
-            height: 8rem;
-        }
 
         .card {
-            box-shadow: 0 5px 10px 0 black !important;
+            border:1px solid purple;
         }
 
         .con .font-bold {
@@ -146,6 +162,10 @@
             /* Gradasi dari transparan ke hitam */
             z-index: -1;
             /* Layer di atas video */
+        }
+        .about .img{
+
+            border : 1px solid purple
         }
     </style>
 </head>
