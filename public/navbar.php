@@ -11,7 +11,7 @@
     <i class="bi bi-house-door px-2 py-1 border-white border-2 rounded-2xl"></i>
     <h1 class="font-bold text-[18px] ml-3">Beranda</h1>
   </a>
-  <a href="../app/views/" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 crusor-pointer text-white hover:bg-purple-500">
+  <a href="../home/about" class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 crusor-pointer text-white hover:bg-purple-500">
     <i class="bi bi-person-fill px-2 py-1 border-white border-2 rounded-2xl"></i>
     <h1 class="font-bold text-[18px] ml-3">About Us</h1>
   </a>
