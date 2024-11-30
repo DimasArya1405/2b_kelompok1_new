@@ -12,7 +12,7 @@
 
         <section class="about w-full gap-5 mt-10 flex flex-col">
             <p>Penyusun :</p>
-            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg">
+            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg" data-aos="fade-up" data-aos-duration="800">
                 <img src="../../../public/assets/dimas.jpg" alt="" class="rounded-md diamond">
                 <table>
                     <tr>
@@ -37,7 +37,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg">
+            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                 <img src="../../../public/assets/alva.jpg" alt="" class="rounded-md diamond">
                 <table>
                     <tr>
@@ -62,7 +62,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg">
+            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                 <img src="../../../public/assets/meilita.jpg" alt="" class="rounded-md">
                 <table>
                     <tr>
@@ -87,7 +87,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg">
+            <div class="card w-full flex justify-center items-center gap-5 p-5 rounded-lg" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
                 <img src="../../../public/assets/noni.jpg" alt="" class="rounded-md">
                 <table>
                     <tr>
